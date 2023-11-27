@@ -1,1 +1,43 @@
+import java.util.Scanner;
 
+public class ArithmeticOperations {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.println("Enter the first number: ");
+        int a = scanner.nextInt();
+
+        System.out.println("Enter the second number: ");
+        int b = scanner.nextInt();
+
+        int addResult = add(a, b);
+        int subtractResult = subtract(a, b);
+        int multiplyResult = multiply(a, b);
+        int divideResult = divide(a, b);
+
+        System.out.println("Addition: " + addResult);
+        System.out.println("Subtraction: " + subtractResult);
+        System.out.println("Multiplication: " + multiplyResult);
+        System.out.println("Division: " + divideResult);
+    }
+
+    private static int add(int a, int b) {
+        return a + b;
+    }
+
+    private static int subtract(int a, int b) {
+        return a - b;
+    }
+
+    private static int multiply(int a, int b) {
+        return a * b;
+    }
+
+    private static int divide(int a, int b) {
+        if (b == 0) {
+            System.out.println("Error: Division by zero is not allowed.");
+            System.exit(1);
+        }
+        return a / b;
+    }
+}
